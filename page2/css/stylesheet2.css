@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 550;
+    font-style: normal;
+    src: url(https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap);
+
+}
+
+*{
+margin: 0;
+padding: 0;
+
+}
+
+/* Initial setup for the body */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+body {
+    background-color: #3A6351;
+}
+
+/* Background swelling animation */
+#backgroundflip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;  /* Start with 0 height */
+    background-color: #04cfcf;  /* Add any background color or image */
+    animation: swellBackground 3s ease-out forwards;  /* Animation duration and easing */
+    z-index: -1;  /* Ensure background stays behind the text */
+    animation-delay: 3s;
+}
+
+/* Keyframes for the swelling effect */
+@keyframes swellBackground {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;  /* Expand to full height of the viewport */
+    }
+}
+
+/* Other animations for text and elements (your existing CSS) */
+h1 {
+    color: #FFFFFF;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 70px;
+    text-align: center;
+}
+
+
+.bounce-word {
+    display: inline-block;
+    position: relative;
+    animation: bounce 1.5s ease-in-out forwards, colorChange 4s ease-in-out forwards;
+    opacity: 0;
+}
+
+.bounce-word:nth-child(1) { animation-delay: 1.1s; top: 250px; }
+.bounce-word:nth-child(2) { animation-delay: 1.3s; top: 260px; }
+.bounce-word:nth-child(3) { animation-delay: 1.5s; top: 270px; }
+.bounce-word:nth-child(4) { animation-delay: 1.7s; top: 280px; }
+.bounce-word:nth-child(5) { animation-delay: 1.9s; top: 300px; }
+
+@keyframes bounce {
+    0% { transform: translateY(-50px); opacity: 0; }
+    50% { transform: translateY(10px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* New animation for color change */
+@keyframes colorChange {
+    0% { 
+        color: #FFFFFF; /* Initial color */
+    }
+    50% {
+        color: #FFFFFF; /* Keep the color the same until halfway through */
+    }
+    100% {
+        color: #FF6347; /* Change color (e.g., Tomato) after text appears */
+    }
+}
+
+
+.fast-text {
+    display: inline-block;
+    opacity: 0;
+    animation: slideIn 0.5s ease-in-out forwards;
+    animation-delay: 3s;
+    
+    background: linear-gradient(90deg, #ca0ddb, #db991d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+
+.fast-text:hover {
+    text-shadow: 0 0 10px rgba(255, 138, 0, 0.4), 
+                 0 0 10px rgba(229, 46, 113, 0.4);
+}
+
+
+@keyframes slideIn {
+    0% { transform: translateX(50px) translateY(350px); opacity: 0; }
+    100% { transform: translateX(0) translateY(350px); opacity: 1; }
+}
+
+
+.slide-left2 {
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    animation: slideLeft2 1.5s ease-out forwards;
+    animation-delay: 5.5s;
+}
+
+@keyframes slideLeft2 {
+    0% { transform: translateX(-100px) translateY(500px); opacity: 0; }
+    100% { transform: translateX(0px) translateY(500px); opacity: 1; }
+}
+
+
+.slide-up2 {
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    animation: slideUp2 1.2s ease-out forwards;
+    animation-delay: 5.5s;
+}
+
+@keyframes slideUp2 {
+    0% { transform: translateY(600px); opacity: 0; }
+    100% { transform: translateY(500px); opacity: 1; }
+}
+
+
+h1 {
+    text-align: center; /* Center-align the heading */
+}
+
+a {
+    text-decoration: none; 
+    display: inline-block; 
+    position: relative;   
+    color: gainsboro;
+}
+
+.bounce-right2 {
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    animation: bounceRight2 1.5s ease-in-out forwards;
+    animation-delay: 6s;
+    transition: text-shadow 0.3s ease-in-out;
+    text-shadow: 0px 0px 5px #ca0ddb; /* Add a shadow effect */
+    text-decoration: none;
+}
+
+.bounce-right2:hover {
+    text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8); /* Change shadow on hover */
+}
+
+@keyframes bounceRight2 {
+    0% { transform: translateX(80px) translateY(500px); opacity: 0; }
+    50% { transform: translateX(-20px) translateY(500px); opacity: 1; }
+    75% { transform: translateX(10px) translateY(500px); opacity: 1; }
+    100% { transform: translateX(0) translateY(500px); opacity: 1; }
+}
+
+
+
+
+    
+

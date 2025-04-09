@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 550;
+    font-style: normal;
+    src: url(https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap);
+
+}
+
+*{
+margin: 0;
+padding: 0;
+
+}
+
+body{
+    background-color: #3A6351;
+    
+}
+
+h1{
+    color: #FFFFFF;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 70px;
+
+    text-align: center;
+   
+}
+
+
+.fade-in-top {
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    animation: fadeInTop 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+    text-align: center;
+    padding-left: 550px;
+}
+
+@keyframes fadeInTop {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.hover-see {
+    color: inherit;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hover-see:hover {
+    opacity: 1;
+}
+
+.fade-in-bottom {
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    animation: fadeInBottom 1.5s ease-in-out forwards;
+    animation-delay: 2s;
+    text-align: center;
+    padding-left: 525px;
+}
+
+@keyframes fadeInBottom {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.grow-large {
+    display: inline-block;
+    transform: scale(0.5);
+    opacity: 0;
+    animation: growLarge 1.2s ease-in-out forwards;
+    animation-delay: 3.5s;
+}
+
+@keyframes growLarge {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.fade-in-home {
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    animation: fadeInHome 1.5s ease-in-out forwards;
+    animation-delay: 5s;
+    text-align: center;
+    padding-left: 750px;
+}
+
+@keyframes fadeInHome {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.glow-home {
+    color: inherit;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.glow-home:hover {
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+}
+
+
+.largest-come-home .glow-home {
+    font-size: 7rem;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+}
+
+.clear-screen3 {
+    animation: fadeOut 1s ease-in-out forwards;
+    animation-delay: 8s;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.largest-come-home {
+    font-size: 4rem;  
+    text-align: center;
+    color: inherit;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -500%) scale(0.5);
+    animation: growCenter 3s ease-in-out forwards;
+    animation-delay: 8s;  
+}
+
+@keyframes growCenter {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -500%) scale(0.5); 
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(3);
+    }
+}
+
+
+.glow-home {
+    color: inherit;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.glow-home:hover {
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 1); 
+}
+
+.artist-name {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 20px; 
+    right: 20px;  
+    opacity: 0;
+    animation: fadeInBottomRight 2s ease-in-out forwards;
+    animation-delay: 10s;  
+}
+
+@keyframes fadeInBottomRight {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
